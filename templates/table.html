@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flat Data Table</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .container,
+        .container-fluid,
+        .container-lg,
+        .container-md,
+        .container-sm,
+        .container-xl {
+            width: auto !important;
+            padding-right: 15px !important;
+            padding-left: 15px !important; 
+            margin-right: auto !important;
+            margin-left: none !important;
+        }
+
+        @media (min-width: 1200px){
+.container, 
+.container-lg, 
+.container-md, 
+.container-sm, 
+.container-xl {
+    max-width: none !important;
+}
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <h1>Flat Data Table<a href="{{ url_for('download_csv') }}" class="btn btn-primary">Download CSV</a></h1>
+        {{ table_html | safe }}
+    </div>
+</body>
+</html>
