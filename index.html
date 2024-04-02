@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Character Animation</title>
+   
+</head>
+<body>
+    <div class="cards-properties">
+        <a class="project-card w-inline-block">
+          <div class="project-image">
+            <div class="commision_box">
+              <div class="commision-text-box">
+                <div class="_5-comission"></div>
+              </div>
+            </div>
+            <div class="commision_box purple hidden">
+              <div class="commision-text-box">
+                <div class="_5-comission"></div>
+              </div>
+            </div>
+          </div>
+          <div class="name_object_block">
+            <div class="project-info-box">
+              <div class="project-name"></div>
+              <div class="area-developer-wrapper">
+                <div class="project-area"></div>
+                <div class="project-area-devider"></div>
+                <div class="project-area"></div>
+              </div>
+            </div>
+            <div class="line-project-horizontal"></div>
+            <div class="div-block-18">
+              <div class="price-box">
+                <div class="price-from"></div>
+                <div class="price-value"></div>
+              </div>
+              <div class="line-vertically"></div>
+              <div class="update-box">
+                <div class="price-from"></div>
+                <div class="date-of-update"></div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+</body>
+</html>
+
+<img src="${project.Cover_URL}" alt="Project Cover" style="width:100%; height: auto;">
+<h3>${project.Project_name}</h3>
+<p>Developer: ${project.Developers_name}</p>
+<p>Area: ${project.Area_name}, ${project.Region}</p>
+<p>Status: ${project.Status}, Priority: ${project.Priority}</p>
+<p>Floors: ${project.Floors}, Furnishing: ${project.Furnishing}</p>
+<p>Bedrooms: ${project.Unit_bedrooms}</p>
+<p>Price From AED: ${project.Price_from_AED}</p>
+<p>Completion Date: ${project.Completion_date}</p>
+
+<div>
+    <input type="text" id="searchInput" placeholder="Search projects...">
+    <button onclick="searchProjects()">Search</button>
+</div>
+
+<div id="projects-container"></div>
+
+<div>
+    <button onclick="changePage(-1)">Previous</button>
+    <button onclick="changePage(1)">Next</button>
+</div>
